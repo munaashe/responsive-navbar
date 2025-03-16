@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import LayoutProvider from "./layout";
+import ThemeProvider from "./theme";
 
 interface ProvidersProps {
     children: ReactNode;
@@ -9,9 +10,11 @@ interface ProvidersProps {
 
 const Providers = ({ children }: ProvidersProps) => {
     return (
-        <LayoutProvider>
-            {children}
-        </LayoutProvider>
+        <ThemeProvider>
+            <LayoutProvider>
+                {children}
+            </LayoutProvider>
+        </ThemeProvider>
     );
 };
 

@@ -8,7 +8,7 @@ interface LayoutProviderProps {
 const LayoutProvider = ({ children }: LayoutProviderProps) => {
 
     return (
-        <div className='min-h-screen'>
+        <div className='!h-screen'>
             <Navbar />
             {children}
         </div>
