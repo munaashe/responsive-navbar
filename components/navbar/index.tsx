@@ -46,7 +46,7 @@ function NavBar() {
                     LOGO
                 </Link>
                 {/* HAMBURGER BUTTON FOR MOBILE */}
-                <button className="absolute md:hidden right-2 top-1 p-2" onClick={() => setNavbar(!navbar)}>
+                <button className="absolute md:hidden right-2 top-1 p-2 z-[111111111]" onClick={() => setNavbar(!navbar)}>
                     <Image src={navbar ? '/assets/icons/close.svg' : '/assets/icons/menu.svg'} width={30} height={30} alt="menu" />
                 </button>
                 {/* NAVIGATION LINKS */}
@@ -63,10 +63,10 @@ function NavBar() {
                 </div>
                 {/* THEME TOGGLE DROPDOWN */}
                 <div className="relative">
-                    <button className="flex items-center justify-start space-x-2 mr-12" onClick={() => setDropdown(!dropdown)}>
+                    <button className="flex items-center justify-start space-x-2 mr-12 z-[1111111111]" onClick={() => setDropdown(!dropdown)}>
                         <Image src={currentTheme === 'dark' ? '/assets/icons/moon.svg' : '/assets/icons/sun.svg'} width={24} height={24} alt="theme icon" />
                     </button>
-                    <div className={`absolute right-0 md:right-0 mt-2 w-24 bg-white border rounded-md shadow-lg ${dropdown ? 'block' : 'hidden'}`}>
+                    <div className={`absolute right-0 md:right-0 mt-2 w-24 bg-white border rounded-md shadow-lg z-1111111 ${dropdown ? 'block' : 'hidden'}`}>
                         <button className="block w-full px-4 py-2 text-left" onClick={() => handleToggleTheme('light')}>
                             <Image src="/assets/icons/sun.svg" width={24} height={24} alt="light mode" className="inline mr-2" />
                         </button>
