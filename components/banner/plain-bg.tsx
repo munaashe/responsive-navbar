@@ -6,7 +6,7 @@ interface BannerProps {
 
 const PlainBgBanner: React.FC<BannerProps> = ({ title, subtitle }) => {
     return (
-        <div className="bg-gray-100 p-8 text-center h-[540px] flex items-center justify-center flex-col">
+        <div className="bg-gray-100 p-8 text-center h-[540px] flex items-center justify-center flex-col dark:text-black">
             <h1 className="text-4xl font-bold mb-4">{title}</h1>
             <p className="text-lg">{subtitle}</p>
         </div>
